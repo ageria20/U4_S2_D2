@@ -27,8 +27,8 @@ public class Main {
                 word = scanner.nextLine();
                 if (wordsList.contains(word)) {
                     System.out.println(word);
-                }
-                wordsList.add(word);
+                    wordsList.add(word);
+                } else wordsList.add(word);
             } catch (Exception e) {
                 System.err.println("Devi inserire una parola");
             }
