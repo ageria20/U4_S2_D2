@@ -1,4 +1,4 @@
-package entities;
+package esercizio1;
 
 import java.util.HashSet;
 import java.util.InputMismatchException;
