@@ -5,32 +5,37 @@ import java.util.Map;
 
 public class Rubrica {
 
-    //    private String name;
-//    private int number;
-    private Map<String, Integer> rubrica = new HashMap<>();
+
+    private Map<String, String> rubrica = new HashMap<>();
 
 
-    public Integer addContact(String name, int number) {
-        return rubrica.put(name, number);
+    public void addContact(String name, String number) {
+        rubrica.put(name, number);
     }
 
-    public Integer removeContact(String name) {
-        return rubrica.remove(name);
+    public void removeContact(String name) {
+        rubrica.remove(name);
     }
 
-    public Integer findContactByNum(int number) {
-        return rubrica.get(number);
+    public String findContactByNum(String number) {
+        String result = "";
+        for (String name : rubrica.keySet()) {
+            if (number.equals(rubrica.get(name))) {
+                result = name;
+            }
+        }
+        return result;
     }
 
-    public Integer findContactByName(String name) {
-        return rubrica.get(name);
+    public void findContactByName(String name) {
+        System.out.println(rubrica.get(name));
     }
 
     @Override
     public String toString() {
 
         return "Rubrica {" +
-                "rubrica = " + rubrica +
+                " " + rubrica +
                 '}';
     }
 }
